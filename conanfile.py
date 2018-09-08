@@ -14,7 +14,7 @@ class CurlConan(ConanFile):
 
     def build(self):
         cmake = CMake(self)
-        cmake.definitions['BUILD_CURL_TESTS'] = 'OFF'
+        cmake.definitions['BUILD_TESTING'] = False
         cmake.configure()
         cmake.build()
 
@@ -23,4 +23,4 @@ class CurlConan(ConanFile):
         cmake.install()
 
     def package_info(self):
-        self.cpp_info.libs = ["Curl"]
+        self.cpp_info.libs = tools.collect_libs(self)
