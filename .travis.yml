@@ -1,10 +1,10 @@
 
 env:
    global:
-     - CONAN_REFERENCE: "Curl/7.61.0"
+     - CONAN_REFERENCE: "Curl/7.61.1"
      - CONAN_USERNAME: "anotherfoxguy"
      - CONAN_LOGIN_USERNAME: "anotherfoxguy"
-     - CONAN_CHANNEL: "Curl"
+     - CONAN_CHANNEL: "testing"
      - CONAN_UPLOAD: "https://api.bintray.com/conan/anotherfoxguy/ror-dependencies"
 
 linux: &linux
